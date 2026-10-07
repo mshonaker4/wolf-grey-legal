@@ -4,7 +4,7 @@ Public policy pages for the local Wolf Grey Context application. Application cod
 
 ## Review status
 
-The October 6, 2026 revision describes the implemented local, on-demand, read-only QuickBooks connector. At the owner’s request, Wolf Grey Context is described as an internal project rather than a separately formed legal entity; “Provider” means its owner and operator. The owner confirmed `formosavacation@gmail.com` as the public contact email and Colorado governing law on October 6, 2026. The changes are ready for owner review and merge before deployment. GitHub Pages was not configured when checked on October 6, 2026; repository visibility alone does not publish a website.
+The October 6, 2026 revision describes the implemented local, on-demand, read-only QuickBooks connector. At the owner’s request, Wolf Grey Context is described as an internal project rather than a separately formed legal entity; “Provider” means its owner and operator. The owner confirmed `formosavacation@gmail.com` as the public contact email and Colorado governing law on October 6, 2026. Legal PR #1 is merged. GitHub Pages is deployed from `main` and `/(root)`; both policy URLs returned HTTPS 200 when checked on October 6, 2026.
 
 ## What these pages describe
 
@@ -34,8 +34,29 @@ Expected addresses after successful deployment:
 - EULA: `https://mshonaker4.github.io/wolf-grey-legal/eula.html`
 - Privacy Policy: `https://mshonaker4.github.io/wolf-grey-legal/privacy.html`
 
-These are deployment targets, not confirmed live URLs. Use the exact addresses reported by GitHub Pages if the hosting configuration changes. Publishing policies does not establish Intuit app approval, OAuth consent or live report validation.
+Both policy addresses above are verified live. The three new app pages below remain publication targets until their deployment is verified. Use the exact addresses reported by GitHub Pages if the hosting configuration changes. Publishing policies does not establish Intuit app approval, OAuth consent or live report validation.
 
 ## Source-code licensing
 
 The EULA controls authorized application use; it is separate from a license granting general rights to the source code. Preserve the core repository's proprietary status unless the owner explicitly chooses a source-code license. No MIT or Apache license is added by this update.
+
+## Internal app URL pages
+
+Prepared for review on October 6, 2026:
+
+- `index.html`: public app information and launch destination.
+- `connect.html`: connection/reconnection instructions for the installed local application.
+- `disconnect.html`: Intuit revocation guidance and reconnect steps. A page visit does not revoke or verify access and does not delete local records.
+
+After reviewing/merging these files, verify the deployed pages without signing in before entering:
+
+| Production field | Value |
+| --- | --- |
+| Host domain | `mshonaker4.github.io` |
+| Launch URL | `https://mshonaker4.github.io/wolf-grey-legal/index.html` |
+| Disconnect URL | `https://mshonaker4.github.io/wolf-grey-legal/disconnect.html` |
+| Connect/Reconnect URL | `https://mshonaker4.github.io/wolf-grey-legal/connect.html` |
+
+These pages contain no forms, scripts, OAuth callbacks, credentials or accounting records. They support the owner's selected local CLI authorization experience; Intuit acceptance of that experience and the shared hostname is still unverified. Production assessment/Terms and actual company consent remain separate.
+
+The Accounting OAuth redirect remains Intuit's documented playground URI, registered separately in Production → Redirect URIs and configured identically in the local CLI. Do not register this public site's pages as callbacks or publish authorization codes here. Custom domain and AWS hosting are deferred for the shortest local MVP path.
